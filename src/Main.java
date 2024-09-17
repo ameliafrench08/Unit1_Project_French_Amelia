@@ -6,14 +6,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
-        // int numPeople = 1;
-
+        // Note/Warning:
+        
         System.out.println("________________________________________________________");
         System.out.println("In the following program: DO NOT USE SYMBOLS");
         System.out.println("________________________________________________________");
 
         System.out.println();
 
+        // Collecting data: 
+        
         System.out.print("Enter the total bill: $");
         String totalBillStr = s.nextLine();
         double totalBill = Double.parseDouble(totalBillStr);
@@ -36,6 +38,8 @@ public class Main {
 
         System.out.println("________________________________________________________");
 
+        // Using data to create the output:
+        
         double totalTip = (double) tipPercentage/100;
         totalTip *= totalBill;
         totalTip = Math.round(totalTip * 100.0) / 100.0;
@@ -48,7 +52,11 @@ public class Main {
         double totalPerPerson = billAndTip / numPeople;
         totalPerPerson = Math.round(totalPerPerson * 100.0)/100.0;
 
+        // Needed to round billAndTip later:
+
         billAndTip = Math.round(billAndTip * 100.0) / 100.0;
+
+        // Output:
 
         System.out.println();
         System.out.println("Total tip: $" + totalTip);
