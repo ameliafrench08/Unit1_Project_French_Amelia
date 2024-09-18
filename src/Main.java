@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-
-        // int numPeople = 1;
-
+        
         System.out.println("________________________________________________________");
         System.out.println("In the following program: DO NOT USE SYMBOLS");
         System.out.println("________________________________________________________");
 
         System.out.println();
+
+        // User inputs data:
 
         System.out.print("Enter the total bill: $");
         String totalBillStr = s.nextLine();
@@ -36,6 +36,8 @@ public class Main {
 
         System.out.println("________________________________________________________");
 
+        // Calculations using data:
+        
         double totalTip = (double) tipPercentage/100;
         totalTip *= totalBill;
         totalTip = Math.round(totalTip * 100.0) / 100.0;
@@ -48,8 +50,12 @@ public class Main {
         double totalPerPerson = billAndTip / numPeople;
         totalPerPerson = Math.round(totalPerPerson * 100.0)/100.0;
 
+        // Rounding billAndTip later because it messes up the calculations if earlier.
+
         billAndTip = Math.round(billAndTip * 100.0) / 100.0;
 
+        // Output:
+        
         System.out.println();
         System.out.println();
         System.out.print("Total tip: $" );
